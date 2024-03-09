@@ -47,7 +47,7 @@ const weather = async () => {
             // Forecast Data For Next Hour
             const { data: weatherForecastData } = await axios.get(`${weatherForecastUrl}/${gridId}/${gridX},${gridY}/forecast/hourly`)
             const closestPeriod = weatherForecastData.properties.periods[0];
-            const forecastTemp = `${closestPeriod.temperature}${closestPeriod.temperatureUnit}`
+            const forecastTemp = `${Math.round(closestPeriod.temperature)}${closestPeriod.temperatureUnit}`
             const forcastPrecipProb = `${closestPeriod.probabilityOfPrecipitation.value}%`
             const forecastWindSpeed = ` ${closestPeriod.windDirection} at ${closestPeriod.windSpeed}`
             const forecastText = `${closestPeriod.shortForecast}`
@@ -61,7 +61,7 @@ const weather = async () => {
             const currentTemp = currentConditionsData.properties.temperature.value * 9 / 5 + 32;
             const currentText = currentConditionsData.properties.textDescription;
             // Nice pretty string for current conditions
-            const currently = `CURRENTLY:  ${getIconForText(currentText)} ${currentText} ${currentTemp}F`
+            const currently = `CURRENTLY:  ${getIconForText(currentText)} ${currentText} ${Math.round(currentTemp)}F`
 
             // Alerts
             const { data: alertData } = await axios.get(`${weatherAlertUrl}/${zone}`)
