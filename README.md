@@ -1,5 +1,10 @@
 # i3blocks Weather
 
+Example of Severe Alert
+![Pic](pic1.jpg)
+
+![Pic](pic2.jpg)
+
 ### Prerequisites
 Install fontawesome \
 ```sudo pacman -S ttf-font-awesome```
