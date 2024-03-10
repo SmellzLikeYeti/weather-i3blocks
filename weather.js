@@ -15,7 +15,7 @@ const weather = async () => {
         if (forecastText.includes('Mostly Sunny') || forecastText.includes('Partly Cloudy')) {
             return ''
         }
-        if (forecastText.includes('Sunny')) {
+        if (forecastText.includes('Sunny') || forecastText.includes('Clear')) {
             return ''
         }
         if (forecastText.includes('Cloudy')) {
