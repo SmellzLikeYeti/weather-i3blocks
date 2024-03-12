@@ -18,7 +18,6 @@ const weather = async () => {
   };
 
   const getIconForText = (forecastText) => {
-    console.log(weatherConfig.hour);
     if (
       forecastText.includes("Thunderstorm") ||
       forecastText.includes("Thunder Showers")
