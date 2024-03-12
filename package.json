@@ -10,6 +10,11 @@
   "author": "Keith Lietzau",
   "license": "ISC",
   "dependencies": {
-    "axios": "^1.6.7"
+    "axios": "^1.6.7",
+    "node": "21.7.0",
+    "npm": "10.5.0"
+  },
+  "devDependencies": {
+    "prettier": "3.2.5"
   }
 }
