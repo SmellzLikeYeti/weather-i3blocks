@@ -33,14 +33,14 @@ const weather = async () => {
     ) {
       return "";
     }
-    if (
-      forecastText.includes("Mostly Sunny") ||
+    if (/* 
+      forecastText.includes("Mostly Sunny") || */
       forecastText.includes("Partly Cloudy")
     ) {
-      return weatherConfig.time > 18 && weatherConfig.time < 6 ? "" : "";
+      return weatherConfig.hour > 18 || weatherConfig.hour < 6 ? "" : "";
     }
     if (forecastText.includes("Sunny") || forecastText.includes("Clear")) {
-      return weatherConfig.time > 18 && weatherConfig.time < 6 ? "" : "";
+      return weatherConfig.hour > 18 || weatherConfig.hour < 6 ? "" : "";
     }
     if (forecastText.includes("Cloudy")) {
       return "";
