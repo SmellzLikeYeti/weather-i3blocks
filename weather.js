@@ -24,6 +24,12 @@ const weather = async () => {
     ) {
       return "";
     }
+    if (
+      forecastText.includes("Thunderstorm") ||
+      forecastText.includes("Thunder Showers")
+    ) {
+      return "";
+    }
     if (forecastText.includes("Rain") || forecastText.includes("Showers")) {
       return "";
     }
